@@ -19,9 +19,9 @@ RUN apk --no-cache add \
       python3
 RUN apk add --no-cache --virtual .build-deps gcc zlib-dev libc-dev bsd-compat-headers py-setuptools bash
 
-COPY ./* /usr/src/
+COPY . .
 
-RUN ls ./
+RUN ls .
 
 RUN npm install
 
