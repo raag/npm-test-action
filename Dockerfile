@@ -19,6 +19,6 @@ RUN apk --no-cache add \
       python3
 RUN apk add --no-cache --virtual .build-deps gcc zlib-dev libc-dev bsd-compat-headers py-setuptools bash
 
-COPY entrypoint.sh .
+COPY entrypoint.sh /usr/src/
 
-ENTRYPOINT ["sh", "./entrypoint.sh"]
+ENTRYPOINT ["sh", "/usr/src/entrypoint.sh"]
