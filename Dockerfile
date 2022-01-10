@@ -19,10 +19,8 @@ RUN apk --no-cache add \
       python3
 RUN apk add --no-cache --virtual .build-deps gcc zlib-dev libc-dev bsd-compat-headers py-setuptools bash
 
-COPY . .
+COPY entrypoint.sh .
 
-RUN ls .
+RUN chmod +x entrypoint.sh
 
-RUN npm install
-
-ENTRYPOINT [ "npm", "run", "test"]
+ENTRYPOINT ["/entrypoint.sh"]
