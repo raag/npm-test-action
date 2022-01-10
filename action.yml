@@ -1,0 +1,6 @@
+# action.yml
+name: 'NPM run test'
+description: 'Run npm test'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
